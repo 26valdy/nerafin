@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -816,50 +817,58 @@
 
 <body>
 
-<div class="app">
+    <div class="app">
 
-    {{-- =========================================
+        {{-- =========================================
          SIDEBAR
     ========================================== --}}
 
-    <aside class="sidebar">
+        <aside class="sidebar">
 
-        <div class="brand">
+            <div class="brand">
 
-            <div class="brand-logo">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
-                    <path d="M3 10h18"></path>
-                    <path d="M5 10v9"></path>
-                    <path d="M9 10v9"></path>
-                    <path d="M15 10v9"></path>
-                    <path d="M19 10v9"></path>
-                    <path d="M2 19h20"></path>
-                    <path d="M4 10 12 4l8 6"></path>
-                </svg>
+                <div class="brand-logo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+                        <path d="M3 10h18"></path>
+                        <path d="M5 10v9"></path>
+                        <path d="M9 10v9"></path>
+                        <path d="M15 10v9"></path>
+                        <path d="M19 10v9"></path>
+                        <path d="M2 19h20"></path>
+                        <path d="M4 10 12 4l8 6"></path>
+                    </svg>
+                </div>
+
+                <div>
+                    <div class="brand-title">Keuangan LSP</div>
+                    <div class="brand-subtitle">Administrasi Terpadu</div>
+                </div>
+
             </div>
 
-            <div>
-                <div class="brand-title">Keuangan LSP</div>
-                <div class="brand-subtitle">Administrasi Terpadu</div>
-            </div>
+            <div class="menu-label">MENU BENDAHARA</div>
 
-        </div>
+            <nav class="nav">
 
-        <div class="menu-label">MENU BENDAHARA</div>
+                <a href="/" class="nav-item active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+                        <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                        <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                        <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                        <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
 
-        <nav class="nav">
-
-            <a href="/" class="nav-item active">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
-                    <rect x="3" y="3" width="7" height="7" rx="1"></rect>
-                    <rect x="14" y="3" width="7" height="7" rx="1"></rect>
-                    <rect x="3" y="14" width="7" height="7" rx="1"></rect>
-                    <rect x="14" y="14" width="7" height="7" rx="1"></rect>
-                </svg>
-                <span>Dashboard</span>
-            </a>
-
-            {{-- Belum aktif pada Tahap 1 --}}
+                <a href="{{ route('categories.index') }}" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+                        <ellipse cx="12" cy="5" rx="8" ry="3"></ellipse>
+                        <path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5"></path>
+                        <path d="M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7"></path>
+                    </svg>
+                    <span>Master</span>
+                </a>
+                <!-- {{-- Belum aktif pada Tahap 1 --}}
             <span class="nav-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
                     <ellipse cx="12" cy="5" rx="8" ry="3"></ellipse>
@@ -867,629 +876,621 @@
                     <path d="M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7"></path>
                 </svg>
                 <span>Master</span>
-            </span>
+            </span> -->
 
-            <span class="nav-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
-                    <path d="M7 7h13"></path>
-                    <path d="m17 3 4 4-4 4"></path>
-                    <path d="M17 17H4"></path>
-                    <path d="m7 13-4 4 4 4"></path>
-                </svg>
-                <span>Transaksi</span>
-            </span>
+                <span class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+                        <path d="M7 7h13"></path>
+                        <path d="m17 3 4 4-4 4"></path>
+                        <path d="M17 17H4"></path>
+                        <path d="m7 13-4 4 4 4"></path>
+                    </svg>
+                    <span>Transaksi</span>
+                </span>
 
-            <span class="nav-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
-                    <path d="M7 7h10a4 4 0 0 1 4 4v1a4 4 0 0 1-4 4H9"></path>
-                    <path d="M9 16 6 19"></path>
-                    <path d="M6 19v-4"></path>
-                    <circle cx="6" cy="7" r="3"></circle>
-                </svg>
-                <span>Tabungan Asesor</span>
-            </span>
+                <span class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+                        <path d="M7 7h10a4 4 0 0 1 4 4v1a4 4 0 0 1-4 4H9"></path>
+                        <path d="M9 16 6 19"></path>
+                        <path d="M6 19v-4"></path>
+                        <circle cx="6" cy="7" r="3"></circle>
+                    </svg>
+                    <span>Tabungan Asesor</span>
+                </span>
 
-            <span class="nav-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
-                    <path d="M6 4h12"></path>
-                    <path d="M6 8h12"></path>
-                    <path d="M6 12h12"></path>
-                    <path d="M6 16h12"></path>
-                    <path d="M6 20h12"></path>
-                    <path d="M4 4v16"></path>
-                    <path d="M20 4v16"></path>
-                </svg>
-                <span>Buku Kas</span>
-            </span>
+                <span class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+                        <path d="M6 4h12"></path>
+                        <path d="M6 8h12"></path>
+                        <path d="M6 12h12"></path>
+                        <path d="M6 16h12"></path>
+                        <path d="M6 20h12"></path>
+                        <path d="M4 4v16"></path>
+                        <path d="M20 4v16"></path>
+                    </svg>
+                    <span>Buku Kas</span>
+                </span>
 
-            <span class="nav-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
-                    <path d="M5 3h10l4 4v14H5z"></path>
-                    <path d="M15 3v5h5"></path>
-                    <path d="M8 16v-3"></path>
-                    <path d="M12 16v-6"></path>
-                    <path d="M16 16v-4"></path>
-                </svg>
-                <span>Laporan</span>
-            </span>
+                <span class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+                        <path d="M5 3h10l4 4v14H5z"></path>
+                        <path d="M15 3v5h5"></path>
+                        <path d="M8 16v-3"></path>
+                        <path d="M12 16v-6"></path>
+                        <path d="M16 16v-4"></path>
+                    </svg>
+                    <span>Laporan</span>
+                </span>
 
-        </nav>
+            </nav>
 
-        <div class="sidebar-note">
+            <div class="sidebar-note">
 
-            <div class="sidebar-note-title">
+                <div class="sidebar-note-title">
 
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
-                    <path d="M12 3 20 6v6c0 5-3.3 8-8 9-4.7-1-8-4-8-9V6z"></path>
-                    <path d="m9 12 2 2 4-4"></path>
-                </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+                        <path d="M12 3 20 6v6c0 5-3.3 8-8 9-4.7-1-8-4-8-9V6z"></path>
+                        <path d="m9 12 2 2 4-4"></path>
+                    </svg>
 
-                <span>Data terkendali</span>
+                    <span>Data terkendali</span>
+
+                </div>
+
+                <p>
+                    Hanya transaksi Approved yang memengaruhi saldo.
+                </p>
 
             </div>
 
-            <p>
-                Hanya transaksi Approved yang memengaruhi saldo.
-            </p>
-
-        </div>
-
-    </aside>
+        </aside>
 
 
-    {{-- =========================================
+        {{-- =========================================
          MAIN
     ========================================== --}}
 
-    <main class="main">
+        <main class="main">
 
-        {{-- TOPBAR --}}
+            {{-- TOPBAR --}}
 
-        <header class="topbar">
+            <header class="topbar">
 
-            <div class="topbar-left">
+                <div class="topbar-left">
 
-                <div class="company">
+                    <div class="company">
 
-                    <svg
-                        class="company-icon"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke-width="1.8"
-                    >
-                        <path d="M4 20V8"></path>
-                        <path d="M9 20V4"></path>
-                        <path d="M15 20v-8"></path>
-                        <path d="M20 20V6"></path>
-                        <path d="M3 20h18"></path>
-                        <path d="M7 8h4"></path>
-                        <path d="M13 5h4"></path>
-                    </svg>
+                        <svg
+                            class="company-icon"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="1.8">
+                            <path d="M4 20V8"></path>
+                            <path d="M9 20V4"></path>
+                            <path d="M15 20v-8"></path>
+                            <path d="M20 20V6"></path>
+                            <path d="M3 20h18"></path>
+                            <path d="M7 8h4"></path>
+                            <path d="M13 5h4"></path>
+                        </svg>
 
-                    <span>LSP Kompetensi Nusantara</span>
-
-                </div>
-
-                <div class="year-badge">
-                    <span class="year-dot"></span>
-                    Tahun Buku 2026
-                </div>
-
-            </div>
-
-
-            <div class="topbar-right">
-
-                <button class="icon-button" type="button" aria-label="Notifikasi">
-
-                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
-                        <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path>
-                        <path d="M10 21h4"></path>
-                    </svg>
-
-                </button>
-
-                <div class="top-divider"></div>
-
-                <div class="profile">
-
-                    <div class="avatar">
-                        DS
-                    </div>
-
-                    <div class="profile-info">
-                        <div class="profile-name">Dewi Sartika</div>
-                        <div class="profile-role">Bendahara</div>
-                    </div>
-
-                    <svg
-                        class="profile-chevron"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke-width="1.8"
-                    >
-                        <path d="m7 10 5 5 5-5"></path>
-                    </svg>
-
-                </div>
-
-            </div>
-
-        </header>
-
-
-        {{-- CONTENT --}}
-
-        <section class="content">
-
-            <div class="page-header">
-
-                <div>
-                    <h1 class="page-title">
-                        Dashboard Bendahara
-                    </h1>
-
-                    <p class="page-subtitle">
-                        Ringkasan posisi keuangan per 29 September 2026.
-                    </p>
-                </div>
-
-                <a href="#" class="primary-button">
-
-                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
-                        <path d="M12 5v14"></path>
-                        <path d="M5 12h14"></path>
-                    </svg>
-
-                    Input Transaksi
-
-                </a>
-
-            </div>
-
-
-            {{-- STATISTICS --}}
-
-            <div class="stats">
-
-                <div class="stat-card">
-
-                    <div class="stat-top">
-
-                        <div class="stat-label">
-                            Saldo saat ini
-                        </div>
-
-                        <div class="stat-icon teal">
-
-                            <svg
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke-width="1.8"
-                            >
-                                <path d="M4 6h16v12H4z"></path>
-                                <path d="M4 9h16"></path>
-                                <path d="M8 14h4"></path>
-                            </svg>
-
-                        </div>
+                        <span>LSP Kompetensi Nusantara</span>
 
                     </div>
 
-                    <div class="stat-value">
-                        Rp 286.450.000
-                    </div>
-
-                    <div class="stat-foot">
-                        Dari transaksi Approved
+                    <div class="year-badge">
+                        <span class="year-dot"></span>
+                        Tahun Buku 2026
                     </div>
 
                 </div>
 
 
-                <div class="stat-card">
+                <div class="topbar-right">
 
-                    <div class="stat-top">
+                    <button class="icon-button" type="button" aria-label="Notifikasi">
 
-                        <div class="stat-label">
-                            Penerimaan bulan ini
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+                            <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path>
+                            <path d="M10 21h4"></path>
+                        </svg>
+
+                    </button>
+
+                    <div class="top-divider"></div>
+
+                    <div class="profile">
+
+                        <div class="avatar">
+                            DS
                         </div>
 
-                        <div class="stat-icon green">
+                        <div class="profile-info">
+                            <div class="profile-name">Dewi Sartika</div>
+                            <div class="profile-role">Bendahara</div>
+                        </div>
 
-                            <svg
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke-width="1.8"
-                            >
-                                <path d="m5 19 14-14"></path>
-                                <path d="M9 5h10v10"></path>
-                            </svg>
+                        <svg
+                            class="profile-chevron"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="1.8">
+                            <path d="m7 10 5 5 5-5"></path>
+                        </svg>
 
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            {{-- CONTENT --}}
+
+            <section class="content">
+
+                <div class="page-header">
+
+                    <div>
+                        <h1 class="page-title">
+                            Dashboard Bendahara
+                        </h1>
+
+                        <p class="page-subtitle">
+                            Ringkasan posisi keuangan per 29 September 2026.
+                        </p>
+                    </div>
+
+                    <a href="#" class="primary-button">
+
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+                            <path d="M12 5v14"></path>
+                            <path d="M5 12h14"></path>
+                        </svg>
+
+                        Input Transaksi
+
+                    </a>
+
+                </div>
+
+
+                {{-- STATISTICS --}}
+
+                <div class="stats">
+
+                    <div class="stat-card">
+
+                        <div class="stat-top">
+
+                            <div class="stat-label">
+                                Saldo saat ini
+                            </div>
+
+                            <div class="stat-icon teal">
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke-width="1.8">
+                                    <path d="M4 6h16v12H4z"></path>
+                                    <path d="M4 9h16"></path>
+                                    <path d="M8 14h4"></path>
+                                </svg>
+
+                            </div>
+
+                        </div>
+
+                        <div class="stat-value">
+                            Rp 286.450.000
+                        </div>
+
+                        <div class="stat-foot">
+                            Dari transaksi Approved
                         </div>
 
                     </div>
 
-                    <div class="stat-value">
-                        Rp 84.750.000
+
+                    <div class="stat-card">
+
+                        <div class="stat-top">
+
+                            <div class="stat-label">
+                                Penerimaan bulan ini
+                            </div>
+
+                            <div class="stat-icon green">
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke-width="1.8">
+                                    <path d="m5 19 14-14"></path>
+                                    <path d="M9 5h10v10"></path>
+                                </svg>
+
+                            </div>
+
+                        </div>
+
+                        <div class="stat-value">
+                            Rp 84.750.000
+                        </div>
+
+                        <div class="stat-foot">
+                            +12,4% dari Agustus
+                        </div>
+
                     </div>
 
-                    <div class="stat-foot">
-                        +12,4% dari Agustus
+
+                    <div class="stat-card">
+
+                        <div class="stat-top">
+
+                            <div class="stat-label">
+                                Pengeluaran bulan ini
+                            </div>
+
+                            <div class="stat-icon red">
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke-width="1.8">
+                                    <path d="m5 5 14 14"></path>
+                                    <path d="M5 15V5h10"></path>
+                                </svg>
+
+                            </div>
+
+                        </div>
+
+                        <div class="stat-value">
+                            Rp 42.365.000
+                        </div>
+
+                        <div class="stat-foot">
+                            49,9% dari penerimaan
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-top">
+
+                            <div class="stat-label">
+                                Menunggu persetujuan
+                            </div>
+
+                            <div class="stat-icon yellow">
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke-width="1.8">
+                                    <circle cx="12" cy="12" r="9"></circle>
+                                    <path d="M12 7v5l3 2"></path>
+                                </svg>
+
+                            </div>
+
+                        </div>
+
+                        <div class="stat-value">
+                            3 transaksi
+                        </div>
+
+                        <div class="stat-foot">
+                            Total Rp 9.650.000
+                        </div>
+
                     </div>
 
                 </div>
 
 
-                <div class="stat-card">
+                {{-- LOWER GRID --}}
 
-                    <div class="stat-top">
-
-                        <div class="stat-label">
-                            Pengeluaran bulan ini
-                        </div>
-
-                        <div class="stat-icon red">
-
-                            <svg
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke-width="1.8"
-                            >
-                                <path d="m5 5 14 14"></path>
-                                <path d="M5 15V5h10"></path>
-                            </svg>
-
-                        </div>
-
-                    </div>
-
-                    <div class="stat-value">
-                        Rp 42.365.000
-                    </div>
-
-                    <div class="stat-foot">
-                        49,9% dari penerimaan
-                    </div>
-
-                </div>
+                <div class="dashboard-grid">
 
 
-                <div class="stat-card">
+                    {{-- TRANSAKSI TERBARU --}}
 
-                    <div class="stat-top">
+                    <div class="card">
 
-                        <div class="stat-label">
-                            Menunggu persetujuan
-                        </div>
+                        <div class="card-header">
 
-                        <div class="stat-icon yellow">
+                            <div>
+                                <div class="card-title">
+                                    Transaksi terbaru
+                                </div>
 
-                            <svg
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke-width="1.8"
-                            >
-                                <circle cx="12" cy="12" r="9"></circle>
-                                <path d="M12 7v5l3 2"></path>
-                            </svg>
+                                <div class="card-subtitle">
+                                    Aktivitas keuangan terbaru lintas status.
+                                </div>
+                            </div>
+
+                            <span class="card-link">
+                                Lihat semua
+                            </span>
 
                         </div>
 
+
+                        <div class="table-wrapper">
+
+                            <table>
+
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>TANGGAL</th>
+                                        <th>JENIS</th>
+                                        <th>KATEGORI</th>
+                                        <th>JUMLAH</th>
+                                        <th>STATUS</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td class="table-id">
+                                            TRX-260924-018
+                                        </td>
+                                        <td>
+                                            24 Sep 2026
+                                        </td>
+                                        <td>
+                                            Penerimaan
+                                        </td>
+                                        <td>
+                                            Biaya Sertifikasi
+                                        </td>
+                                        <td>
+                                            Rp 12.500.000
+                                        </td>
+                                        <td>
+                                            <span class="badge approved">
+                                                <span class="badge-dot"></span>
+                                                Approved
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="table-id">
+                                            TRX-260923-017
+                                        </td>
+                                        <td>
+                                            23 Sep 2026
+                                        </td>
+                                        <td>
+                                            Pengeluaran
+                                        </td>
+                                        <td>
+                                            Honor Asesor
+                                        </td>
+                                        <td>
+                                            Rp 4.800.000
+                                        </td>
+                                        <td>
+                                            <span class="badge pending">
+                                                <span class="badge-dot"></span>
+                                                Pending
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="table-id">
+                                            TRX-260922-016
+                                        </td>
+                                        <td>
+                                            22 Sep 2026
+                                        </td>
+                                        <td>
+                                            Pengeluaran
+                                        </td>
+                                        <td>
+                                            Operasional TUK
+                                        </td>
+                                        <td>
+                                            Rp 2.350.000
+                                        </td>
+                                        <td>
+                                            <span class="badge approved">
+                                                <span class="badge-dot"></span>
+                                                Approved
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="table-id">
+                                            TRX-260920-015
+                                        </td>
+                                        <td>
+                                            20 Sep 2026
+                                        </td>
+                                        <td>
+                                            Penerimaan
+                                        </td>
+                                        <td>
+                                            Pelatihan Kompetensi
+                                        </td>
+                                        <td>
+                                            Rp 8.750.000
+                                        </td>
+                                        <td>
+                                            <span class="badge approved">
+                                                <span class="badge-dot"></span>
+                                                Approved
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="table-id">
+                                            TRX-260919-014
+                                        </td>
+                                        <td>
+                                            19 Sep 2026
+                                        </td>
+                                        <td>
+                                            Pengeluaran
+                                        </td>
+                                        <td>
+                                            Perlengkapan ATK
+                                        </td>
+                                        <td>
+                                            Rp 1.125.000
+                                        </td>
+                                        <td>
+                                            <span class="badge rejected">
+                                                <span class="badge-dot"></span>
+                                                Rejected
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
                     </div>
 
-                    <div class="stat-value">
-                        3 transaksi
-                    </div>
 
-                    <div class="stat-foot">
-                        Total Rp 9.650.000
-                    </div>
+                    {{-- RIGHT COLUMN --}}
 
-                </div>
-
-            </div>
+                    <div class="right-column">
 
 
-            {{-- LOWER GRID --}}
+                        {{-- ALOKASI DANA --}}
 
-            <div class="dashboard-grid">
+                        <div class="card allocation-card">
 
-
-                {{-- TRANSAKSI TERBARU --}}
-
-                <div class="card">
-
-                    <div class="card-header">
-
-                        <div>
                             <div class="card-title">
-                                Transaksi terbaru
+                                Alokasi dana 2026
                             </div>
 
                             <div class="card-subtitle">
-                                Aktivitas keuangan terbaru lintas status.
+                                Realisasi transaksi Approved
                             </div>
-                        </div>
-
-                        <span class="card-link">
-                            Lihat semua
-                        </span>
-
-                    </div>
 
 
-                    <div class="table-wrapper">
+                            <div class="allocation-item">
 
-                        <table>
+                                <div class="allocation-row">
 
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>TANGGAL</th>
-                                    <th>JENIS</th>
-                                    <th>KATEGORI</th>
-                                    <th>JUMLAH</th>
-                                    <th>STATUS</th>
-                                </tr>
-                            </thead>
+                                    <span class="allocation-name">
+                                        Operasional LSP
+                                    </span>
 
-                            <tbody>
+                                    <span class="allocation-value">
+                                        Rp 74,4 jt
+                                    </span>
 
-                                <tr>
-                                    <td class="table-id">
-                                        TRX-260924-018
-                                    </td>
-                                    <td>
-                                        24 Sep 2026
-                                    </td>
-                                    <td>
-                                        Penerimaan
-                                    </td>
-                                    <td>
-                                        Biaya Sertifikasi
-                                    </td>
-                                    <td>
-                                        Rp 12.500.000
-                                    </td>
-                                    <td>
-                                        <span class="badge approved">
-                                            <span class="badge-dot"></span>
-                                            Approved
-                                        </span>
-                                    </td>
-                                </tr>
+                                </div>
 
-                                <tr>
-                                    <td class="table-id">
-                                        TRX-260923-017
-                                    </td>
-                                    <td>
-                                        23 Sep 2026
-                                    </td>
-                                    <td>
-                                        Pengeluaran
-                                    </td>
-                                    <td>
-                                        Honor Asesor
-                                    </td>
-                                    <td>
-                                        Rp 4.800.000
-                                    </td>
-                                    <td>
-                                        <span class="badge pending">
-                                            <span class="badge-dot"></span>
-                                            Pending
-                                        </span>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td class="table-id">
-                                        TRX-260922-016
-                                    </td>
-                                    <td>
-                                        22 Sep 2026
-                                    </td>
-                                    <td>
-                                        Pengeluaran
-                                    </td>
-                                    <td>
-                                        Operasional TUK
-                                    </td>
-                                    <td>
-                                        Rp 2.350.000
-                                    </td>
-                                    <td>
-                                        <span class="badge approved">
-                                            <span class="badge-dot"></span>
-                                            Approved
-                                        </span>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td class="table-id">
-                                        TRX-260920-015
-                                    </td>
-                                    <td>
-                                        20 Sep 2026
-                                    </td>
-                                    <td>
-                                        Penerimaan
-                                    </td>
-                                    <td>
-                                        Pelatihan Kompetensi
-                                    </td>
-                                    <td>
-                                        Rp 8.750.000
-                                    </td>
-                                    <td>
-                                        <span class="badge approved">
-                                            <span class="badge-dot"></span>
-                                            Approved
-                                        </span>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td class="table-id">
-                                        TRX-260919-014
-                                    </td>
-                                    <td>
-                                        19 Sep 2026
-                                    </td>
-                                    <td>
-                                        Pengeluaran
-                                    </td>
-                                    <td>
-                                        Perlengkapan ATK
-                                    </td>
-                                    <td>
-                                        Rp 1.125.000
-                                    </td>
-                                    <td>
-                                        <span class="badge rejected">
-                                            <span class="badge-dot"></span>
-                                            Rejected
-                                        </span>
-                                    </td>
-                                </tr>
-
-                            </tbody>
-
-                        </table>
-
-                    </div>
-
-                </div>
-
-
-                {{-- RIGHT COLUMN --}}
-
-                <div class="right-column">
-
-
-                    {{-- ALOKASI DANA --}}
-
-                    <div class="card allocation-card">
-
-                        <div class="card-title">
-                            Alokasi dana 2026
-                        </div>
-
-                        <div class="card-subtitle">
-                            Realisasi transaksi Approved
-                        </div>
-
-
-                        <div class="allocation-item">
-
-                            <div class="allocation-row">
-
-                                <span class="allocation-name">
-                                    Operasional LSP
-                                </span>
-
-                                <span class="allocation-value">
-                                    Rp 74,4 jt
-                                </span>
+                                <div class="progress-bg">
+                                    <div
+                                        class="progress-fill"
+                                        style="width: 64%;"></div>
+                                </div>
 
                             </div>
 
-                            <div class="progress-bg">
-                                <div
-                                    class="progress-fill"
-                                    style="width: 64%;"
-                                ></div>
+
+                            <div class="allocation-item">
+
+                                <div class="allocation-row">
+
+                                    <span class="allocation-name">
+                                        Sertifikasi
+                                    </span>
+
+                                    <span class="allocation-value">
+                                        Rp 96,0 jt
+                                    </span>
+
+                                </div>
+
+                                <div class="progress-bg">
+                                    <div
+                                        class="progress-fill"
+                                        style="width: 50%;"></div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="allocation-item">
+
+                                <div class="allocation-row">
+
+                                    <span class="allocation-name">
+                                        Pengembangan SDM
+                                    </span>
+
+                                    <span class="allocation-value">
+                                        Rp 28,0 jt
+                                    </span>
+
+                                </div>
+
+                                <div class="progress-bg">
+                                    <div
+                                        class="progress-fill"
+                                        style="width: 36%;"></div>
+                                </div>
+
                             </div>
 
                         </div>
 
 
-                        <div class="allocation-item">
+                        {{-- STATUS PROSES --}}
 
-                            <div class="allocation-row">
+                        <div class="card process-card">
 
-                                <span class="allocation-name">
-                                    Sertifikasi
-                                </span>
+                            <div class="process-top">
 
-                                <span class="allocation-value">
-                                    Rp 96,0 jt
-                                </span>
+                                <div class="card-title">
+                                    Status proses
+                                </div>
 
-                            </div>
-
-                            <div class="progress-bg">
-                                <div
-                                    class="progress-fill"
-                                    style="width: 50%;"
-                                ></div>
-                            </div>
-
-                        </div>
-
-
-                        <div class="allocation-item">
-
-                            <div class="allocation-row">
-
-                                <span class="allocation-name">
-                                    Pengembangan SDM
-                                </span>
-
-                                <span class="allocation-value">
-                                    Rp 28,0 jt
-                                </span>
+                                <div class="pending-count">
+                                    <span></span>
+                                    3 Pending
+                                </div>
 
                             </div>
 
-                            <div class="progress-bg">
-                                <div
-                                    class="progress-fill"
-                                    style="width: 36%;"
-                                ></div>
+                            <div class="process-description">
+                                Transaksi Pending belum masuk perhitungan saldo
+                                hingga disetujui Ketua.
                             </div>
 
-                        </div>
-
-                    </div>
-
-
-                    {{-- STATUS PROSES --}}
-
-                    <div class="card process-card">
-
-                        <div class="process-top">
-
-                            <div class="card-title">
-                                Status proses
-                            </div>
-
-                            <div class="pending-count">
-                                <span></span>
-                                3 Pending
-                            </div>
-
-                        </div>
-
-                        <div class="process-description">
-                            Transaksi Pending belum masuk perhitungan saldo
-                            hingga disetujui Ketua.
                         </div>
 
                     </div>
 
                 </div>
 
-            </div>
+            </section>
 
-        </section>
+        </main>
 
-    </main>
-
-</div>
+    </div>
 
 </body>
+
 </html>

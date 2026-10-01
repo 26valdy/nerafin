@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
@@ -13,22 +14,10 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
 
-    // Semua user yang sudah login
     Route::view('/', 'home')
         ->name('home');
 
-    // Khusus Bendahara
-    Route::get('/test-bendahara', function () {
-        return 'Akses Bendahara berhasil.';
-    })->middleware('role:Bendahara');
-
-    // Khusus Ketua
-    Route::get('/test-ketua', function () {
-        return 'Akses Ketua berhasil.';
-    })->middleware('role:Ketua');
-
-    // Contoh route yang boleh diakses kedua role
-    Route::get('/test-keuangan', function () {
-        return 'Akses Keuangan berhasil.';
-    })->middleware('role:Bendahara,Ketua');
+    Route::middleware('role:Bendahara')->group(function () {
+        Route::resource('categories', CategoryController::class);
+    });
 });
